@@ -5,7 +5,7 @@
         "image": "/me.webp",
         "email": "j3leonardodelgado@gmail.com",
         "phone": "+1 614-881-8723",
-        "url": "",
+        "link": "",
         "summary": "As a Full Stack Software Developer, I'm enthusiastic to significantly contribute to creating innovative and efficient software solutions. With a robust skill set encompassing JavaScript, Python, Node.js, SQL, Git, CSS, HTML, Express, FastAPI, Object-Oriented Programming (OOP), and Linux, I'm well-prepared to embrace fresh challenges while continuing my journey of learning and development as a developer.",
         "location": {
             "address": "",
@@ -18,13 +18,13 @@
             {
                 "network": "LinkedIn",
                 "username": "jleonardod",
-                "url": "https://linkedin.com/in/jleonardod"
+                "link": "https://linkedin.com/in/jleonardod"
             },
 
             {
                 "network": "GitHub",
                 "username": "Lealdos",
-                "url": "https://github.com/lealdos"
+                "link": "https://github.com/lealdos"
             }
         ]
     },
@@ -32,7 +32,7 @@
         {
             "name": "Surge Staffing",
             "position": "Onsite supervisor",
-            "url": "https://surgestaffing.com/",
+            "link": "https://surgestaffing.com/",
             "startDate": "05-05-2023",
             "endDate": null,
             "summary": "overseeing and managing on-site operations, ensuring compliance with safety regulations, supervising staff, and addressing any issues that may arise during the course of work.",
@@ -41,7 +41,7 @@
         {
             "name": "FreeLancer",
             "position": "Software engineer",
-            "url": "https://twitch.tv/midudev",
+            "link": "https://twitch.tv/midudev",
             "startDate": "2020-06-01",
             "endDate": "2023-05-01",
             "summary": "crafting custom code, building websites or applications tailored to client needs, troubleshooting technical issues, and effectively communicating to understand and meet project requirements.",
@@ -60,7 +60,7 @@
         {
             "organization": "Organization",
             "position": "Volunteer",
-            "url": "https://organization.com/",
+            "link": "https://organization.com/",
             "startDate": "2012-01-01",
             "endDate": "2013-01-01",
             "summary": "Description…",
@@ -70,7 +70,7 @@
     "education": [
         {
             "institution": "Universidad Católica Andres Bello, Guayana",
-            "url": "https://www.ucab.edu.ve/guayana/",
+            "link": "https://www.ucab.edu.ve/guayana/",
             "area": "Software engineer",
             "studyType": "Bachelor",
             "startDate": "01-01-2013",
@@ -80,7 +80,7 @@
         },
         {
             "institution": "FreeCodeCamp",
-            "url": "https://www.ucab.edu.ve/guayana/",
+            "link": "https://www.ucab.edu.ve/guayana/",
             "area": "Software engineer",
             "studyType": "Bachelor",
             "startDate": "01-01-2020",
@@ -102,7 +102,7 @@
             "name": "Certificate",
             "date": "2021-11-07",
             "issuer": "Company",
-            "url": "https://certificate.com"
+            "link": "https://certificate.com"
         }
     ],
     "publications": [
@@ -110,7 +110,7 @@
             "name": "Publication",
             "publisher": "Company",
             "releaseDate": "2014-10-01",
-            "url": "https://publication.com",
+            "link": "https://publication.com",
             "summary": "Description…"
         }
     ],
@@ -235,15 +235,18 @@
     ],
     "projects": [
         {
+            "image":"/poem.jpg",
             "name": "Poem Generator",
             "isActive": true,
             "description": "A web application through which, with the assistance of an AI, you can upload any image. You will be able to visualize it, and after a short time, you will receive a poem that uses the previously uploaded image as inspiration.",
             "highlights": ["React", "TypeScript", "Tailwind", "Gemini AI"],
-            "url": "https://regalo-ana.vercel.app/",
-            "github": "https://github.com/Lealdos/regalo-ana"
+            "link": "https://regalo-ana.vercel.app/",
+            "github": "https://github.com/Lealdos/regalo-ana",
+            "tags": ["TAGS.NEXT", "TAGS.TAILWIND"]
         },
         {
             "name": "Future Store",
+            "image":"/futureword.jpg",
             "isActive": true,
             "description": "Creation of an E-commerce platform with functionalities including authentication, shopping cart, AI-powered virtual assistant, integration with the Shopify API, and more. It is built primarily using Next.js 14, TypeScript, Tailwind, and Zustand.",
             "highlights": [
@@ -256,12 +259,13 @@
                 "Zustand",
                 "SDK"
             ],
-            "url": "https://shopify-ecommerce-three.vercel.app/",
+            "link": "https://shopify-ecommerce-three.vercel.app/",
             "github": "https://github.com/Lealdos/Shopify-ecommerce"
         },
 
         {
             "name": "Resdy",
+            "image":"/resdyB.jpg",
             "isActive": false,
             "description": "A powerful RESTfull API built with Prisma ORM, Node.js, TSOA, and TypeScript. This API serves as a robust backend for our application, providing seamless data management and powerful endpoint interactions. With TypeScript's typing and TSOA's automatic routing, this project ensures a scalable and maintainable codebase.",
             "highlights": [
@@ -273,11 +277,12 @@
                 "Tsoa",
                 "API REST"
             ],
-            "url": "https://github.com/Lealdos/restify-v2-backend",
+            "link": "https://github.com/Lealdos/restify-v2-backend",
             "github": "https://github.com/Lealdos/restify-v2-backend"
         },
         {
             "name": "ToDo App With login",
+            "image":"/ToDosphoto.jpg",
             "isActive": true,
             "description": "This is a Todo List application built using React. It allows users to manage their tasks efficiently by adding, editing, and deleting items from their to-do list. Also the users can check their tasks list from any divice when they login using the auth feature and connect to the backed. ",
             "highlights": [
@@ -288,16 +293,8 @@
                 "LocalStorages",
                 "Data Fetching"
             ],
-            "url": "https://lealdos.github.io/TodoAppJS/",
+            "link": "https://lealdos.github.io/TodoAppJS/",
             "github": "https://github.com/Lealdos/TodoAppJS"
-        },
-        {
-            "name": "Diario el Tepuy",
-            "isActive": true,
-            "description": "A WordPress-based sports news page is a website designed to deliver updates and information on various sports. It utilizes WordPress as a content management system, enabling easy creation and organization of articles, news, and multimedia content. ",
-            "highlights": ["Wordpress", "Hosting", "Deploy", "CEO"],
-            "url": "https://diariotepuy.com/",
-            "github": null
         }
     ]
 }
