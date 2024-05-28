@@ -1,5 +1,5 @@
-/* empty css                         */
-import { e as createComponent, r as renderTemplate, m as maybeRenderHead, s as spreadAttributes, i as createAstro, j as renderComponent, h as addAttribute, k as renderHead, l as renderSlot, n as Fragment } from './astro_CSU0oJjU.mjs';
+/* empty css                          */
+import { e as createComponent, r as renderTemplate, m as maybeRenderHead, s as spreadAttributes, i as createAstro, j as renderComponent, h as addAttribute, k as renderHead, l as renderSlot, n as Fragment } from '../astro_CSU0oJjU.mjs';
 
 const $$Astro$i = createAstro();
 const $$Sun = createComponent(($$result, $$props, $$slots) => {
@@ -239,6 +239,16 @@ const $$LinkButton = createComponent(($$result, $$props, $$slots) => {
 }, "C:/Users/j3leo/Documents/Devproyect/easyporfolio.dev/src/components/LinkButton.astro", void 0);
 
 const $$Projects = createComponent(($$result, $$props, $$slots) => {
+  const TAGS = {
+    Next: {
+      background: "bg-black text-white",
+      icon: $$NextJS
+    },
+    Tailwind: {
+      background: "bg-[#003159] text-white",
+      icon: $$Tailwind
+    }
+  };
   const PROJECTS = [
     {
       image: "/poem.jpg",
@@ -247,8 +257,7 @@ const $$Projects = createComponent(($$result, $$props, $$slots) => {
       description: "A web application through which, with the assistance of an AI, you can upload any image. You will be able to visualize it, and after a short time, you will receive a poem that uses the previously uploaded image as inspiration.",
       highlights: ["React", "TypeScript", "Tailwind", "Gemini AI"],
       link: "https://regalo-ana.vercel.app/",
-      github: "https://github.com/Lealdos/regalo-ana",
-      tags: ["TAGS.NEXT", "TAGS.TAILWIND"]
+      github: "https://github.com/Lealdos/regalo-ana"
     },
     {
       name: "Future Store",
@@ -256,7 +265,7 @@ const $$Projects = createComponent(($$result, $$props, $$slots) => {
       isActive: true,
       description: "Creation of an E-commerce platform with functionalities including authentication, shopping cart, AI-powered virtual assistant, integration with the Shopify API, and more. It is built primarily using Next.js 14, TypeScript, Tailwind, and Zustand.",
       highlights: [
-        "NextJS 14",
+        "Next",
         "OpenAI API",
         "TypeScript",
         "Vercel Deploy",
@@ -291,7 +300,7 @@ const $$Projects = createComponent(($$result, $$props, $$slots) => {
       isActive: true,
       description: "This is a Todo List application built using React. It allows users to manage their tasks efficiently by adding, editing, and deleting items from their to-do list. Also the users can check their tasks list from any divice when they login using the auth feature and connect to the backed. ",
       highlights: [
-        "Login system",
+        "Authentication",
         "React",
         "PostgreSQL",
         "Modals",
@@ -303,7 +312,7 @@ const $$Projects = createComponent(($$result, $$props, $$slots) => {
     }
   ];
   return renderTemplate`${maybeRenderHead()}<div class="flex flex-col gap-y-16"> ${PROJECTS.map(
-    ({ image, name, description, highlights, link, github }) => renderTemplate`<article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0"> <div class="w-full md:w-1/2"> <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50"> <img alt="Recién llegado vs 5 años en Nueva Zelanda" class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy"${addAttribute(image, "src")}> </div> </div> <div class="w-full md:w-1/2 md:max-w-lg"> <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100"> ${name} </h3> <div class="flex flex-wrap mt-2"> <div class="mt-2 text-gray-700 dark:text-gray-400"> ${description} </div> <footer class="flex items-end justify-start mt-4 gap-x-4"> ${github && renderTemplate`${renderComponent($$result, "LinkButton", $$LinkButton, { "href": github }, { "default": ($$result2) => renderTemplate` ${renderComponent($$result2, "GitHub", $$GitHub, { "class": "size-6" })}
+    ({ image, name, description, highlights, link, github }) => renderTemplate`<article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0"> <div class="w-full md:w-1/2"> <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50"> <img alt="Recién llegado vs 5 años en Nueva Zelanda" class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy"${addAttribute(image, "src")}> </div> </div> <div class="w-full md:w-1/2 md:max-w-lg"> <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100"> ${name} </h3> <div class="flex flex-wrap mt-2"> <div class="my-2 text-gray-700 dark:text-gray-300"> ${description} </div> <ul class="flex flex-row mb-2 gap-2 flex-wrap "> ${highlights.map((highlight) => renderTemplate`<span${addAttribute(`flex items-center justify-center gap-1 text-md border border-gray-500 rounded-md px-2 py-1  p-1 ${TAGS[highlight]?.background} `, "class")}> ${highlight} </span>`)} </ul> <footer class="flex items-end justify-start mt-4 gap-x-4"> ${github && renderTemplate`${renderComponent($$result, "LinkButton", $$LinkButton, { "href": github }, { "default": ($$result2) => renderTemplate` ${renderComponent($$result2, "GitHub", $$GitHub, { "class": "size-6" })}
 Code
 ` })}`} ${link && renderTemplate`${renderComponent($$result, "LinkButton", $$LinkButton, { "href": link }, { "default": ($$result2) => renderTemplate` ${renderComponent($$result2, "Link", $$Link, { "class": "size-4" })}
 Preview

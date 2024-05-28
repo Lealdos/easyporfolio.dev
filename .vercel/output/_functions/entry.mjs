@@ -1,5 +1,5 @@
 import { renderers } from './renderers.mjs';
-import { l as levels, g as getEventPrefix, L as Logger, A as AstroIntegrationLogger, manifest } from './manifest_Cp47YWB1.mjs';
+import { l as levels, g as getEventPrefix, L as Logger, A as AstroIntegrationLogger, manifest } from './manifest_5YEx9QBd.mjs';
 import { serialize, parse as parse$4 } from 'cookie';
 import { A as AstroError, R as ResponseSentError, G as GetStaticPathsRequired, o as InvalidGetStaticPathsReturn, p as InvalidGetStaticPathsEntry, q as GetStaticPathsExpectedParams, t as GetStaticPathsInvalidRouteParam, P as PageNumberParamNotFound, u as ROUTE_TYPE_HEADER, v as MiddlewareNoDataOrNextCalled, w as MiddlewareNotAResponse, N as NoMatchingStaticPathFound, x as PrerenderDynamicEndpointPathCollide, y as ReservedSlotName, z as renderSlotToString, B as renderJSX, C as chunkToString, D as clientAddressSymbol$1, H as ClientAddressNotAvailable, S as StaticClientAddressNotAvailable, J as responseSentSymbol$1, K as LocalsNotAnObject, O as clientLocalsSymbol, Q as ASTRO_VERSION, T as renderEndpoint, V as renderPage, W as REROUTABLE_STATUS_CODES, X as REROUTE_DIRECTIVE_HEADER, Y as commonjsGlobal } from './chunks/astro_CSU0oJjU.mjs';
 import { j as joinPaths, s as slash$1, p as prependForwardSlash, t as trimSlashes, e as appendForwardSlash, r as removeTrailingForwardSlash, f as collapseDuplicateSlashes } from './chunks/astro/assets-service_DtOR17ZB.mjs';
@@ -8779,7 +8779,7 @@ const createExports = (manifest, { middlewareSecret, skewProtection }) => {
 };
 
 const _page0 = () => import('./chunks/generic_DmIJl8p5.mjs');
-const _page1 = () => import('./chunks/index_DYgeB7QV.mjs');
+const _page1 = () => import('./chunks/index_CE6loDt9.mjs');
 const pageMap = new Map([
     ["node_modules/.pnpm/astro@4.4.5_typescript@5.3.3/node_modules/astro/dist/assets/endpoint/generic.js", _page0],
     ["src/pages/index.astro", _page1]
@@ -8791,7 +8791,7 @@ const _manifest = Object.assign(manifest, {
     middleware: onRequest
 });
 const _args = {
-    "middlewareSecret": "7e8cfea2-deb8-4167-b45a-ca3bd8c948e7",
+    "middlewareSecret": "8805fa9d-3d99-42ef-82d1-a62edfbe016d",
     "skewProtection": false
 };
 const _exports = createExports(_manifest, _args);
