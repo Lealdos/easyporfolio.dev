@@ -16,7 +16,7 @@ interface Tags {
 
 const TAGS: Tags = {
     Next: {
-        background: 'bg-black text-white',
+        background: 'bg-gray-800 text-white',
         icon: NextJS,
     },
     Tailwind: {
@@ -25,16 +25,6 @@ const TAGS: Tags = {
     },
 };
 const PROJECTS = [
-    {
-        image: '/poem.jpg',
-        name: 'Poem Generator',
-        isActive: true,
-        description:
-            'A web application through which, with the assistance of an AI, you can upload any image. You will be able to visualize it, and after a short time, you will receive a poem that uses the previously uploaded image as inspiration.',
-        highlights: ['React', 'TypeScript', 'Tailwind', 'Gemini AI'],
-        link: 'https://poeamsgenerator.vercel.app/',
-        github: 'https://github.com/Lealdos/regalo-ana',
-    },
     {
         name: 'Future Store',
         image: '/futureword.jpg',
@@ -54,7 +44,15 @@ const PROJECTS = [
         link: 'https://shopify-ecommerce-three.vercel.app/',
         github: 'https://github.com/Lealdos/Shopify-ecommerce',
     },
-
+    {
+        name: 'Diario Tepuy',
+        image: '/diariotepuy.png',
+        isActive: true,
+        description:
+            'Diario Tepuy is a sports newspaper website that provides information about the latest news, results, and events in the world of soccer, basketball, and tennis, among others. It was developed using WordPress as a content management system (CMS).',
+        highlights: ['WordPress'],
+        link: 'https://diariotepuy.com/',
+    },
     {
         name: 'Resdy',
         image: '/resdyB.jpg',
@@ -72,6 +70,16 @@ const PROJECTS = [
         ],
         link: 'https://github.com/Lealdos/restify-v2-backend',
         github: 'https://github.com/Lealdos/restify-v2-backend',
+    },
+    {
+        image: '/poem.jpg',
+        name: 'Poem Generator',
+        isActive: true,
+        description:
+            'A web application through which, with the assistance of an AI, you can upload any image. You will be able to visualize it, and after a short time, you will receive a poem that uses the previously uploaded image as inspiration.',
+        highlights: ['React', 'TypeScript', 'Tailwind', 'Gemini AI'],
+        link: 'https://poeamsgenerator.vercel.app/',
+        github: 'https://github.com/Lealdos/regalo-ana',
     },
     {
         name: 'ToDo App With login',
@@ -97,11 +105,11 @@ const PROJECTS = [
     {
         PROJECTS.map(
             ({ image, name, description, highlights, link, github }) => (
-                <article class='flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0'>
+                <article class='flex  space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0'>
                     <div class='w-full md:w-1/2'>
                         <div class='relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50'>
                             <img
-                                alt='Recién llegado vs 5 años en Nueva Zelanda'
+                                alt={name}
                                 class='object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105'
                                 loading='lazy'
                                 src={image}
@@ -127,22 +135,22 @@ const PROJECTS = [
                                     </span>
                                 ))}
                             </ul>
-
-                            <footer class='flex items-end justify-start mt-4 gap-x-4'>
-                                {github && (
-                                    <LinkButton href={github}>
-                                        <GitHub class='size-6' />
-                                        Code
-                                    </LinkButton>
-                                )}
-                                {link && (
-                                    <LinkButton href={link}>
-                                        <Link class='size-4' />
-                                        Preview
-                                    </LinkButton>
-                                )}
-                            </footer>
                         </div>
+
+                        <footer class='flex items-end justify-start mt-4 gap-x-4'>
+                            {github && (
+                                <LinkButton href={github}>
+                                    <GitHub class='size-6' />
+                                    Code
+                                </LinkButton>
+                            )}
+                            {link && (
+                                <LinkButton href={link}>
+                                    <Link class='size-4' />
+                                    Preview
+                                </LinkButton>
+                            )}
+                        </footer>
                     </div>
                 </article>
             )
