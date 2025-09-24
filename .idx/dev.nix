@@ -4,7 +4,7 @@
   # Which nixpkgs channel to use.
   channel = "stable-23.11"; # or "unstable"
   # Use https://search.nixos.org/packages to find packages
-  packages = [ pkgs.nodejs_20 ];
+  packages = [ pkgs.nodejs_20 pkgs.corepack_21] ;
   # Sets environment variables in the workspace
   env = { };
   idx = {
@@ -14,18 +14,21 @@
       # Runs when a workspace is first created with this `dev.nix` file
       onCreate = {
         install = ''
-          npm install
-          yes | npx astro add tailwind'';
+          pnpm install
+          yes | pnpx astro add tailwind'';
+      };
+      onStart = {
+        run = ''pnpm run dev'';
       };
       # To run something each time the environment is rebuilt, use the `onStart` hook
     };
     # Enable previews and customize configuration
     previews = {
-      enable = true;
+      enable = false;
       previews = {
         web = {
           command =
-            [ "npm" "run" "dev" "--" "--port" "$PORT" "--hostname" "0.0.0.0" ];
+            [ "pnpm" "run" "dev" "--" "--port" "$PORT" "--hostname" "0.0.0.0" ];
           manager = "web";
         };
       };
