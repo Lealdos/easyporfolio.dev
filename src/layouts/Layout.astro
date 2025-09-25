@@ -3,18 +3,25 @@ import '@fontsource-variable/onest';
 
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import { ViewTransitions } from 'astro:transitions';
-
 interface Props {
     title: string;
     description: string;
+    lang: string;
+    t?: {
+        languageOptions: {
+            es: string;
+            en: string;
+        };
+    };
 }
 
-const { description, title } = Astro.props;
+const { description, title,lang } = Astro.props;
+
+
 ---
 
 <!doctype html>
-<html lang='en'>
+<html lang={lang}>
     <head>
         <meta charset='UTF-8' />
         <meta name='viewport' content='width=device-width' />
@@ -26,7 +33,6 @@ const { description, title } = Astro.props;
         />
         <title>{title}</title>
         <meta name='description' content={description} />
-        <ViewTransitions />
     </head>
 
     <body class='relative text-black dark:text-white'>

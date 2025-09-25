@@ -4,6 +4,18 @@ import Badge from '@/components/Badge.astro';
 import LinkedInIcon from '@/components/icons/LinkedIn.astro';
 import MailIcon from '@/components/icons/Mail.astro';
 import SocialPill from '@/components/SocialPill.astro';
+import { en } from '@/i18n/en';
+import { es } from '@/i18n/es';
+import type { i18nUI } from '@/i18n/i18n.type';
+
+
+const { lang } = Astro.props;
+
+console.log('trye',lang)
+
+const translations = { es, en };
+const t:i18nUI = translations[lang];
+
 ---
 
 <div class='max-w-xl'>

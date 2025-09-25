@@ -1,0 +1,89 @@
+---
+import Layout from '@/layouts/Layout.astro';
+
+import AboutMe from '@/components/AboutMe.astro';
+import Briefcase from '@/components/icons/Briefcase.astro';
+import CodeIcon from '@/components/icons/Code.astro';
+import Experience from '@/components/Experience.astro';
+import ProfileCheck from '@/components/icons/ProfileCheck.astro';
+import Projects from '@/components/Projects.astro';
+import SectionContainer from '@/components/SectionContainer.astro';
+import Hero from '@/components/Hero.astro';
+import type { Languages } from '@/i18n/Language';
+
+import {es} from '@/i18n/es';
+import {en} from '@/i18n/en';
+
+export const prerender = true;
+
+export function getStaticPaths() {
+  return [{ params: { lang: "es" } }, { params: { lang: "en" } }];
+}
+export const defaultRedirect = "/en";
+
+const lang = Astro.params.lang as Languages;
+const translations = { es, en };
+const t = translations[lang];
+
+// const languages = [
+//   { code: "es", label: t?.languageOptions.es },
+//   { code: "en", label: t?.languageOptions.en },
+// ];
+
+console.log(lang)
+
+
+---
+
+<Layout
+    title={t.pageInfo.title}
+    description={t.pageInfo.description}
+    lang={lang}
+    t={t}
+>
+    <main class='px-4'>
+        <SectionContainer class='py-16 md:py-36'>
+            <Hero lang = {lang} />
+        </SectionContainer>
+    </main>
+    <div class='space-y-24'>
+        <SectionContainer id='Experiences'>
+            <h2
+                class='flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white'
+            >
+                <Briefcase class='size-8' />
+                {t.sections.workHistory}
+            </h2>
+            <Experience />
+        </SectionContainer>
+
+        <SectionContainer id='Project'>
+            <h2
+                class='flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white'
+            >
+                <CodeIcon class='size-7' />
+                {t.sections.project}
+            </h2>
+            <Projects />
+        </SectionContainer>
+
+        <SectionContainer id='About-me'>
+            <h2
+                class='flex items-center mb-6 text-3xl font-semibold gap-x-8 text-black/80 dark:text-white'
+            >
+                <ProfileCheck class='size-8' />
+                {t.sections.aboutMe}
+            </h2>
+            <AboutMe />
+        </SectionContainer>
+    </div>
+    <!-- <SectionContainer id="Contact-me">
+    <h2
+    class="flex items-center mb-6 text-3xl font-semibold gap-x-8 text-black/80 dark:text-white"
+  >
+    <ProfileCheck class="size-8" />
+    Contact
+  </h2>
+    <Contact client:only/>
+  </SectionContainer> -->
+</Layout>

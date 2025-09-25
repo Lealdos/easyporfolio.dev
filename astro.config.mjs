@@ -1,3 +1,5 @@
+// @ts-check
+
 import { defineConfig } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
 import robotsTxt from 'astro-robots-txt';
@@ -10,4 +12,12 @@ export default defineConfig({
     site: 'https://Lealdos.github.io',
     output: 'server',
     adapter: netlify(),
+    i18n: {
+        defaultLocale: 'en',
+        locales: ['en','es'],
+        routing: {
+            prefixDefaultLocale: true
+        }
+    },
+
 });
