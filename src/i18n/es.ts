@@ -29,7 +29,7 @@ export const es: i18nUI = {
         contactBadge: 'Contact me',
     },
     projects: {
-        CodeBadge: 'Code',
-        LinkBadge: 'Link',
+        CodeBadge: 'Código',
+        LinkBadge: 'Enlace',
     },
 };
