@@ -1,29 +1,46 @@
 ---
-const currentYear = new Date().getFullYear()
+import { en } from '@/i18n/en';
+import { es } from '@/i18n/es';
+import type { i18nUI } from '@/i18n/i18n.type';
+import type { Languages } from '@/i18n/Language';
+
+const lang: Languages = Astro.props.lang ?? 'en';
+
+const translations = { es, en };
+const { footer }: i18nUI = translations[lang];
+
+const currentYear = new Date().getFullYear();
 ---
 
 <footer
-  class="opacity-80 m-4 mt-16 w-full md:mx-auto container lg:max-w-4xl md:max-w-2xl mb-10 flex justify-center"
+    class='opacity-80 m-4 mt-16 w-full md:mx-auto container lg:max-w-4xl md:max-w-2xl mb-10 flex justify-center'
 >
-  <div
-    class="rounded-lg w-full max-w-screen-xl mx-auto md:flex md:items-center md:justify-between py-4"
-  >
-    <span class="text-sm sm:text-center text-zinc-800/90 dark:text-zinc-200/90"
-      >© {currentYear}
-      <a href="https://github.com/Lealdos" class="hover:underline">Lealdos</a>. some
-      rights reserved.
-    </span>
-    <ul
-      class="flex flex-wrap items-center mt-3 text-sm font-medium dark:text-white/90 sm:mt-0"
+    <div
+        class='rounded-lg w-full max-w-screen-xl mx-auto md:flex md:items-center md:justify-between py-4'
     >
-      <li>
-        <a href="/#sobre-mi" class="hover:underline me-4 md:me-6">About me</a>
-      </li>
-      <li>
-        <a id="contacto" href="mailto:j3leonardodelgado@gmail.com" class="hover:underline"
-          >Contact</a
+        <span
+            class='text-sm sm:text-center text-zinc-800/90 dark:text-zinc-200/90'
+            >© {currentYear}
+            <a href='https://github.com/Lealdos' class='hover:underline'
+                >Lealdos</a
+            >. {footer.copyright}
+        </span>
+        <ul
+            class='flex flex-wrap items-center mt-3 text-sm font-medium dark:text-white/90 sm:mt-0'
         >
-      </li>
-    </ul>
-  </div>
+            <li>
+                <a
+                    href=`/${lang}/#about-me`
+                    class='hover:underline me-4 md:me-6'>{footer.about}</a
+                >
+            </li>
+            <li>
+                <a
+                    id='contacto'
+                    href='mailto:j3leonardodelgado@gmail.com'
+                    class='hover:underline'>{footer.contact}</a
+                >
+            </li>
+        </ul>
+    </div>
 </footer>

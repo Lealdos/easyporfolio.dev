@@ -1,32 +1,39 @@
 ---
 import ThemeToggle from './ThemeToggle.astro';
-
 import LanguageSelector from './LanguageSelector.astro';
+
+import { en } from '@/i18n/en';
+import { es } from '@/i18n/es';
+import type { i18nUI } from '@/i18n/i18n.type';
+import type { Languages } from '@/i18n/Language';
+
+const lang: Languages = Astro.props.lang ?? 'en';
+
+const translations = { es, en };
+const { nav }: i18nUI = translations[lang];
 
 const navItems = [
     {
-        title: 'Experience',
-        label: 'Experience',
+        title: `${nav.experience}`,
+        label: `${nav.experience}`,
         url: '/#Experiences',
     },
     {
-        title: 'Projects',
-        label: 'Projects',
+        title: `${nav.project}`,
+        label: `${nav.project}`,
         url: '/#Project',
     },
     {
-        title: 'About me',
-        label: 'About me',
+        title: `${nav.about}`,
+        label: `${nav.about}`,
         url: '/#About-me',
     },
-    {
-        title: 'Contact',
-        label: 'Contact',
-        url: '/#Contact-me',
-    },
+    // {
+    //     title: 'Contact',
+    //     label: 'Contact',
+    //     url: '/#Contact-me',
+    // },
 ];
-
-
 ---
 
 <header
@@ -48,8 +55,8 @@ const navItems = [
                 </a>
             ))
         }
-        <ThemeToggle />
-        <LanguageSelector/>
+        <ThemeToggle lang={lang} />
+        <LanguageSelector lang={lang} />
     </nav>
 </header>
 

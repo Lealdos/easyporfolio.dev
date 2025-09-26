@@ -7,15 +7,12 @@ import SocialPill from '@/components/SocialPill.astro';
 import { en } from '@/i18n/en';
 import { es } from '@/i18n/es';
 import type { i18nUI } from '@/i18n/i18n.type';
+import type { Languages } from '@/i18n/Language';
 
-
-const { lang } = Astro.props;
-
-console.log('trye',lang)
+const lang: Languages = Astro.props.lang ?? 'en';
 
 const translations = { es, en };
-const t:i18nUI = translations[lang];
-
+const t: i18nUI = translations[lang];
 ---
 
 <div class='max-w-xl'>
@@ -31,26 +28,23 @@ const t:i18nUI = translations[lang];
             rel='noopener'
             class='flex items-center transition md:justify-center md:hover:scale-105'
         >
-            <Badge>Open to work</Badge>
+            <Badge>{t.hero.jobStatus}</Badge>
         </a>
     </div>
     <h1
         class='text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white'
     >
-        Hello, i'm Jose Leonardo Delgado Avila
+        {t.hero.title}
     </h1>
     <p
         class='mt-6 text-xl text-gray-800 dark:[&>strong]:text-yellow-200 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300'
     >
-        A Venezuelan bilingual developer based in the U.S, committed to their
-        work. A strong team player with a commitment to excellence and
-        constantly expanding who is always learning, growing, and sharpening my
-        problem-solving skills to create better software solutions.
+        {t.hero.description}
     </p>
     <nav class='flex flex-wrap gap-4 mt-8'>
         <SocialPill href='mailto:j3leonardodelgado@gmail.com'>
             <MailIcon class='size-4' />
-            Contact me
+            {t.hero.contactBadge}
         </SocialPill>
         <SocialPill href='https://www.linkedin.com/in/jleonardod/'>
             <LinkedInIcon class='size-4' />

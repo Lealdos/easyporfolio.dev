@@ -1,5 +1,15 @@
 ---
 const personalImageAlt = 'Jose Delgado';
+
+import { en } from '@/i18n/en';
+import { es } from '@/i18n/es';
+import type { i18nUI } from '@/i18n/i18n.type';
+import type { Languages } from '@/i18n/Language';
+
+const lang: Languages = Astro.props.lang ?? 'en';
+
+const translations = { es, en };
+const { aboutMe }: i18nUI = translations[lang];
 ---
 
 <article
@@ -8,20 +18,7 @@ const personalImageAlt = 'Jose Delgado';
     <div
         class='[&>p]:mb-4 [&>p>strong]:text-yellow-500 dark:[&>p>strong]:text-yellow-100 [&>p>strong]:font-normal [&>p>strong]:font-mono text-pretty order-2 md:order-1'
     >
-        <p>
-            As a Full Stack Software Developer, I'm team player and enthusiastic
-            to significantly contribute to creating efficient software
-            solutions. always eager to learn and grow as a developer and seeking
-            opportunities to apply my skills in a challenging environment.
-        </p>
-
-        <p>
-            I have a robust skill set encompassing JavaScript, Typescript,
-            Python, Node.js, SQL, Git, CSS, HTML, Express, NestJS, React, Astro,
-            Next.js, Docker and Linux, I'm well-prepared to embrace fresh
-            challenges while continuing my journey of learning and development
-            as a developer.
-        </p>
+        {aboutMe.paragraphs.map((para) => <p>{para}</p>)}
     </div>
 
     <img

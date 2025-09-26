@@ -11,28 +11,22 @@ import SectionContainer from '@/components/SectionContainer.astro';
 import Hero from '@/components/Hero.astro';
 import type { Languages } from '@/i18n/Language';
 
-import {es} from '@/i18n/es';
-import {en} from '@/i18n/en';
+import { es } from '@/i18n/es';
+import { en } from '@/i18n/en';
 
 export const prerender = true;
 
 export function getStaticPaths() {
-  return [{ params: { lang: "es" } }, { params: { lang: "en" } }];
+    const languages = [{ params: { lang: 'es' } }, { params: { lang: 'en' } }];
+
+    return languages;
 }
-export const defaultRedirect = "/en";
+export const defaultRedirect = '/en';
 
 const lang = Astro.params.lang as Languages;
+
 const translations = { es, en };
 const t = translations[lang];
-
-// const languages = [
-//   { code: "es", label: t?.languageOptions.es },
-//   { code: "en", label: t?.languageOptions.en },
-// ];
-
-console.log(lang)
-
-
 ---
 
 <Layout
@@ -43,7 +37,7 @@ console.log(lang)
 >
     <main class='px-4'>
         <SectionContainer class='py-16 md:py-36'>
-            <Hero lang = {lang} />
+            <Hero lang={lang} />
         </SectionContainer>
     </main>
     <div class='space-y-24'>
@@ -54,7 +48,7 @@ console.log(lang)
                 <Briefcase class='size-8' />
                 {t.sections.workHistory}
             </h2>
-            <Experience />
+            <Experience lang={lang} />
         </SectionContainer>
 
         <SectionContainer id='Project'>
@@ -64,7 +58,7 @@ console.log(lang)
                 <CodeIcon class='size-7' />
                 {t.sections.project}
             </h2>
-            <Projects />
+            <Projects lang={lang} />
         </SectionContainer>
 
         <SectionContainer id='About-me'>
@@ -74,7 +68,7 @@ console.log(lang)
                 <ProfileCheck class='size-8' />
                 {t.sections.aboutMe}
             </h2>
-            <AboutMe />
+            <AboutMe lang={lang} />
         </SectionContainer>
     </div>
     <!-- <SectionContainer id="Contact-me">

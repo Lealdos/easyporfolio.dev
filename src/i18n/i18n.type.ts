@@ -17,8 +17,6 @@ export type i18nUI = {
         about: string;
         experience: string;
         contact: string;
-        theme: string;
-        language: string;
     };
     hero: {
         jobStatus: string;
@@ -44,14 +42,16 @@ export type i18nUI = {
             title: string;
             company: string;
             description: string;
-            date: Date | string;
+            date: string;
             endDate: string | null;
         }[];
+        present: string;
     };
     aboutMe: {
-        paragraph: string[];
+        paragraphs: string[];
     };
     themeToggle: {
+        label: string;
         light: string;
         dark: string;
         system: string;
@@ -59,7 +59,7 @@ export type i18nUI = {
     footer: {
         name: string;
         contact: string;
-        text: string;
+        copyright: string;
         about: string;
     };
 };

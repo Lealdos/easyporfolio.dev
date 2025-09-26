@@ -1,23 +1,21 @@
 ---
 import ExperienceItem from './ExperienceItem.astro';
-const EXPERIENCE = [
-    {
-        company: 'FreeLancer',
-        title: 'Software engineer',
-        date: '2022-06-01',
-        endDate: '',
-        description:
-            'crafting custom code, building websites or applications tailored to client needs, troubleshooting technical issues, and effectively communicating to understand and meet project requirements.',
-        highlights: ['Started the company'],
-    },
-];
+import { en } from '@/i18n/en';
+import { es } from '@/i18n/es';
+import type { i18nUI } from '@/i18n/i18n.type';
+import type { Languages } from '@/i18n/Language';
+
+const lang: Languages = Astro.props.lang ?? 'en';
+
+const translations = { es, en };
+const { experiences }: i18nUI = translations[lang];
 ---
 
 <ol class='relative mt-16'>
     {
-        EXPERIENCE.map((experience) => (
-            <li class=''>
-                <ExperienceItem {...experience} />
+        experiences.experience.map((experience) => (
+            <li>
+                <ExperienceItem {...experience} present={experiences.present} />
             </li>
         ))
     }
