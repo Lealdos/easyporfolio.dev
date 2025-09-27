@@ -9,15 +9,13 @@ import netlify from '@astrojs/netlify';
 // https://astro.build/config
 export default defineConfig({
     integrations: [tailwind(), robotsTxt()],
-    site: 'https://Lealdos.github.io',
     output: 'server',
     adapter: netlify(),
     i18n: {
         defaultLocale: 'en',
-        locales: ['en','es'],
+        locales: ['en', 'es'],
         routing: {
-            prefixDefaultLocale: true
-        }
+            prefixDefaultLocale: true,
+        },
     },
-
 });
