@@ -56,7 +56,7 @@ export const es: i18nUI = {
         description:
             'Un desarrollador bilingüe venezolano radicado en EE.UU, comprometido con su trabajo. Un fuerte jugador de equipo con un compromiso con la excelencia y en constante expansión que siempre está aprendiendo, creciendo y perfeccionando mis habilidades para resolver problemas y crear mejores soluciones de software.',
     },
-    projects: {
+    portfolioProjects: {
         projects: [
             {
                 name: 'Future Store',

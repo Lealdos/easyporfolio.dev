@@ -24,7 +24,7 @@ export type i18nUI = {
         title: string;
         description: string;
     };
-    projects: {
+    portfolioProjects: {
         projects: {
             name: string;
             description: string;

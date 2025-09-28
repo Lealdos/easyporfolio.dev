@@ -49,7 +49,7 @@ export const en: i18nUI = {
         ],
         present: 'Present',
     },
-    projects: {
+    portfolioProjects: {
         projects: [
             {
                 name: 'Future Store',
