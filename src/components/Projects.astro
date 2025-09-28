@@ -4,6 +4,15 @@ import NextJS from './icons/NextJS.astro';
 import Tailwind from './icons/Tailwind.astro';
 import Link from './icons/Link.astro';
 import LinkButton from './LinkButton.astro';
+import { en } from '@/i18n/en';
+import { es } from '@/i18n/es';
+import type { i18nUI } from '@/i18n/i18n.type';
+import type { Languages } from '@/i18n/Language';
+
+const lang: Languages = Astro.props.lang ?? 'en';
+
+const translations = { es, en };
+const { portfolioProjects }: i18nUI = translations[lang];
 
 interface Tag {
     background: string;
@@ -24,64 +33,7 @@ const TAGS: Tags = {
         icon: Tailwind,
     },
 };
-const PROJECTS = [
-    {
-        name: 'Future Store',
-        image: '/futureword.jpg',
-        isActive: true,
-        description:
-            'Creation of an E-commerce platform with functionalities including authentication, shopping cart, AI-powered virtual assistant, integration with the Shopify API, and more. It is built primarily using Next.js 14, TypeScript, Tailwind, and Zustand.',
-        techStack: [
-            'Next',
-            'OpenAI API',
-            'TypeScript',
-            'Vercel Deploy',
-            'ShopifyAPI',
-            'Tailwind',
-            'Zustand',
-            'SDK',
-        ],
-        link: 'https://shopify-ecommerce-three.vercel.app/',
-        github: 'https://github.com/Lealdos/Shopify-ecommerce',
-    },
-    {
-        name: 'Diario Tepuy',
-        image: '/diariotepuy.png',
-        isActive: true,
-        description:
-            'Diario Tepuy is a sports newspaper website that provides information about the latest news, results, and events in the world of soccer, basketball, and tennis, among others. It was developed using WordPress as a content management system (CMS).',
-        techStack: ['WordPress'],
-        link: 'https://diariotepuy.com/',
-    },
-    {
-        name: 'Resdy',
-        image: '/resdyB.jpg',
-        isActive: false,
-        description:
-            "A powerful RESTfull API built with Prisma ORM, Node.js, TSOA, and TypeScript. This API serves as a robust backend for our application, providing seamless data management and powerful endpoint interactions. With TypeScript's typing and TSOA's automatic routing, this project ensures a scalable and maintainable codebase.",
-        techStack: [
-            'ORM',
-            'Prisma',
-            'Express',
-            'Docker',
-            'TypeScript',
-            'Tsoa',
-            'API REST',
-        ],
-        link: 'https://github.com/Lealdos/restify-v2-backend',
-        github: 'https://github.com/Lealdos/restify-v2-backend',
-    },
-    {
-        image: '/poem.jpg',
-        name: 'Poem Generator',
-        isActive: true,
-        description:
-            'A web application through which, with the assistance of an AI, you can upload any image. You will be able to visualize it, and after a short time, you will receive a poem that uses the previously uploaded image as inspiration.',
-        techStack: ['React', 'TypeScript', 'Tailwind', 'Gemini AI'],
-        link: 'https://poeamsgenerator.vercel.app/',
-        github: 'https://github.com/Lealdos/regalo-ana',
-    },
-];
+const PROJECTS = portfolioProjects.projects;
 ---
 
 <div class='flex flex-col gap-y-16 m-2'>
