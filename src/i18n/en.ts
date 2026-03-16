@@ -31,7 +31,7 @@ export const en: i18nUI = {
     hero: {
         jobStatus: 'Open to work',
         contactBadge: 'Contact me',
-        title: "Hello, i'm Jose Leonardo Delgado Avila",
+        title: "Hello, i'm Jose L Delgado",
         description:
             'A Venezuelan bilingual developer based in the U.S, committed to their work. A strong team player with a commitment to excellence and constantly expanding who is always learning, growing, and sharpening my problem-solving skills to create better software solutions.',
     },

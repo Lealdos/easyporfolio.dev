@@ -52,7 +52,7 @@ export const es: i18nUI = {
     hero: {
         jobStatus: 'Abierto a oportunidades',
         contactBadge: 'Escríbeme',
-        title: 'Hola, soy Jose Leonardo Delgado Avila',
+        title: 'Hola, soy Jose L Delgado',
         description:
             'Un desarrollador bilingüe venezolano radicado en EE.UU, comprometido con su trabajo. Un fuerte jugador de equipo con un compromiso con la excelencia y en constante expansión que siempre está aprendiendo, creciendo y perfeccionando mis habilidades para resolver problemas y crear mejores soluciones de software.',
     },
