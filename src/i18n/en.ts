@@ -7,9 +7,9 @@ export const en: i18nUI = {
         en: 'English',
     },
     pageInfo: {
-        title: "Jose Delgado's Portfolio - software engineer - web developer ",
+        title: "Jose L Delgado's Portfolio - software engineer - web developer ",
         description:
-            'Hire Jose Delgado to create your web or mobile application. Web Developer specialized in crafting unique applications.',
+            'Hire Jose L Delgado to create your web or mobile application. Web Developer specialized in crafting unique applications.',
     },
     sections: {
         project: 'Projects',

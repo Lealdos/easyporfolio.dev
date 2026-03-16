@@ -4,9 +4,9 @@ export const es: i18nUI = {
     languageLabel: 'Selecciona tu Idioma',
 
     pageInfo: {
-        title: 'Portafolio Jose Delgado - Ingeniero de software - Desarrollador web',
+        title: 'Portafolio Jose L Delgado - Ingeniero de software - Desarrollador web',
         description:
-            'Contrata a Jose Delgado para crear, mejorar o mantener tu aplicación web o servicios. Desarrollador web especializado en crear aplicaciones únicas. ',
+            'Contrata a Jose L Delgado para crear, mejorar o mantener tu aplicación web o servicios. Desarrollador web especializado en crear aplicaciones únicas. ',
     },
     sections: {
         project: 'Proyectos',
