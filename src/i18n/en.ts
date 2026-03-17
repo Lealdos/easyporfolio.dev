@@ -33,7 +33,7 @@ export const en: i18nUI = {
         contactBadge: 'Contact me',
         title: "Hello, I'm Jose L Delgado",
         description:
-            'A Venezuelan bilingual Software Engineer and Technical Consultant based in the U.S. I partner with founders and product teams to build high-performance web applications, AI-enabled workflows, and scalable digital products with React, Next.js, TypeScript, and modern integrations.',
+            'A Venezuelan bilingual Software Engineer and Technical Consultant based in the U.S. I partner with founders and product teams to build high-performance web applications, AI-enabled workflows, and scalable digital products with React, Next.js, TypeScript, Node.js, and modern integrations.',
     },
 
     experiences: {

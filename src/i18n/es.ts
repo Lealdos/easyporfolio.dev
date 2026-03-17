@@ -2,6 +2,12 @@ import type { i18nUI } from './i18n.type';
 
 export const es: i18nUI = {
     languageLabel: 'Selecciona tu Idioma',
+    nav: {
+        project: 'Proyectos',
+        about: 'Acerca de',
+        experience: 'Experiencia',
+        contact: 'Contacto',
+    },
 
     pageInfo: {
         title: 'Portafolio de Jose L Delgado | Ingeniero de Software, Consultor Técnico, Desarrollador Full Stack',
@@ -23,6 +29,13 @@ export const es: i18nUI = {
         es: 'Español',
         en: 'Inglés',
     },
+    hero: {
+        jobStatus: 'Disponible para freelance y contratos',
+        contactBadge: 'Escríbeme',
+        title: 'Hola, soy Jose L Delgado',
+        description:
+            'Ingeniero de Software y Consultor Técnico bilingüe, venezolano y radicado en EE.UU. Colaboro con founders y equipos de producto para crear aplicaciones web de alto rendimiento, flujos con IA y productos digitales escalables con React, Next.js, TypeScript, Node.js e integraciones modernas.',
+    },
     experiences: {
         experience: [
             {
@@ -36,27 +49,7 @@ export const es: i18nUI = {
         ],
         present: 'Presente',
     },
-    aboutMe: {
-        paragraphs: [
-            'Soy Ingeniero de Software y Consultor Técnico, y ayudo a founders, startups y empresas en crecimiento a convertir requerimientos en productos digitales escalables y listos para producción, alineados con objetivos de negocio.',
-            'Mi trabajo se centra en aplicaciones web full stack, integraciones y flujos potenciados por IA con React, Next.js, TypeScript, Tailwind CSS y herramientas backend modernas, con especial atención al rendimiento, la arquitectura limpia y la mantenibilidad.',
-            'Trabajo de extremo a extremo, desde discovery y diseño técnico hasta despliegue, iteración y soporte continuo, traduciendo necesidades de negocio en soluciones prácticas para stakeholders técnicos y no técnicos.',
-        ],
-    },
 
-    nav: {
-        project: 'Proyectos',
-        about: 'Acerca de',
-        experience: 'Experiencia',
-        contact: 'Contacto',
-    },
-    hero: {
-        jobStatus: 'Disponible para freelance y contratos',
-        contactBadge: 'Escríbeme',
-        title: 'Hola, soy Jose L Delgado',
-        description:
-            'Ingeniero de Software y Consultor Técnico bilingüe, venezolano y radicado en EE.UU. Colaboro con founders y equipos de producto para crear aplicaciones web de alto rendimiento, flujos con IA y productos digitales escalables con React, Next.js, TypeScript e integraciones modernas.',
-    },
     portfolioProjects: {
         projects: [
             {
@@ -121,6 +114,13 @@ export const es: i18nUI = {
         ],
         CodeBadge: 'Código',
         LinkBadge: 'Enlace',
+    },
+    aboutMe: {
+        paragraphs: [
+            'Soy Ingeniero de Software y Consultor Técnico, y ayudo a founders, startups y empresas en crecimiento a convertir requerimientos en productos digitales escalables y listos para producción, alineados con objetivos de negocio.',
+            'Mi trabajo se centra en aplicaciones web full stack, integraciones y flujos potenciados por IA con React, Next.js, TypeScript, Tailwind CSS y herramientas backend modernas, con especial atención al rendimiento, la arquitectura limpia y la mantenibilidad.',
+            'Trabajo de extremo a extremo, desde discovery y diseño técnico hasta despliegue, iteración y soporte continuo, traduciendo necesidades de negocio en soluciones prácticas para stakeholders técnicos y no técnicos.',
+        ],
     },
     footer: {
         about: 'Acerca de mi',
