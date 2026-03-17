@@ -1,31 +1,27 @@
 {
-  "name": "porfolio-dev",
-  "type": "module",
-  "version": "0.0.1",
-  "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro check && astro build",
-    "preview": "astro preview",
-    "astro": "astro"
-  },
-  "dependencies": {
-    "@astrojs/check": "0.9.8",
-    "@astrojs/react": "^5.0.0",
-    "@astrojs/tailwind": "6.0.2",
-    "@astrojs/vercel": "^10.0.1",
-    "@fontsource-variable/onest": "5.0.2",
-    "@types/react": "^18.3.2",
-    "@types/react-dom": "^18.3.0",
-    "astro": "6.0.5",
-    "astro-robots-txt": "1.0.0",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "resend": "^3.2.0",
-    "tailwindcss": "3.4.1",
-    "typescript": "5.3.3"
-  },
-  "devDependencies": {
-    "baseline-browser-mapping": "^2.10.8"
-  }
+    "name": "porfolio-dev",
+    "version": "0.0.1",
+    "dependencies": {
+        "@astrojs/check": "0.9.8",
+        "@astrojs/react": "^5.0.0",
+        "@astrojs/vercel": "^10.0.1",
+        "@fontsource-variable/onest": "5.0.2",
+        "@tailwindcss/vite": "^4.2.1",
+        "@types/react": "^18.3.2",
+        "@types/react-dom": "^18.3.0",
+        "astro": "6.0.5",
+        "astro-robots-txt": "1.0.0",
+        "react": "^18.3.1",
+        "react-dom": "^18.3.1",
+        "tailwindcss": "^4.2.1",
+        "typescript": "5.3.3"
+    },
+    "scripts": {
+        "dev": "astro dev",
+        "start": "astro dev",
+        "build": "astro check && astro build",
+        "preview": "astro preview",
+        "astro": "astro"
+    },
+    "type": "module"
 }
